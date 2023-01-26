@@ -15,9 +15,15 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.tela}>
       <StatusBar />
       <Cesta {...mock} />
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  tela: {
+    flex: 1,
+  }
+})
