@@ -1,15 +1,17 @@
 import React from "react";
-import {  StyleSheet, Dimensions, Text, View} from "react-native";
+import {  StyleSheet, ScrollView, Text, View} from "react-native";
 import Header from '../Telas/components/Header';
 import Details from "./components/Details";
-const Cesta = () => {
+import Itens from "./components/Itens";
+const Cesta = ({topo, details, itens}) => {
     return (
-        <>
-            <Header/>
+        <ScrollView>
+            <Header {...topo} />
             <View style={styles.cestaView}>
-                <Details />
+                <Details {...details} />
+                <Itens {...itens}/>
             </View>
-        </>
+        </ScrollView>
     )
 }
 

@@ -1,18 +1,19 @@
 import { StyleSheet, Text, Image, View} from "react-native";
-import farmImage from '../../../../assets/logo.png';
+import MyButton from "../../Buttons/MyButton";
 import Texto from '../../Texto/Texto';
 
 
-const Details = () => {
+const Details = ({nameCesta,janyJackFarm,farmLogo,description,price,btnComprar}) => {
     return( 
         <>
-            <Texto style={styles.nameCesta}>Cesta de Verduras</Texto>
+            <Texto style={styles.nameCesta}>{nameCesta}</Texto>
                 <View style={styles.farmView}>
-                    <Image style={styles.farmImage} source={farmImage}/>
-                    <Texto style={styles.janyJackFarm}>Jany Jack Farm</Texto>
+                    <Image style={styles.farmImage} source={farmLogo}/>
+                    <Texto style={styles.janyJackFarm}>{janyJackFarm}</Texto>
                     </View>
-                <Texto style={styles.description}>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha.</Texto>
-            <Texto style={styles.price}>$ 33,99</Texto>
+                <Texto style={styles.description}>{description}</Texto>
+            <Texto style={styles.price}>{price}</Texto>
+            <MyButton textBtn={btnComprar} onPress={() => {}} style={styles.buttonStyle}/>
         </>
     )
 }
@@ -52,5 +53,11 @@ const styles = StyleSheet.create({
     farmView: {
         flexDirection: 'row',
         paddingVertical: 12,
-    }
+    },
+    buttonStyle: {
+        marginTop: 16,
+        backgroundColor: '#2A9F85',
+        paddingVertical: 16,
+        borderRadius: 7,
+    },
 })
