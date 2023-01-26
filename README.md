@@ -1,0 +1,2 @@
+# Projeto de aula desenvolvido durante os dias 24 e 26 Janeiro, repositório não pretende ter atualizações pelo conteúdo ser bem antigo #
+# Link Aulas: https://cursos.alura.com.br/course/react-native-comecando-zero #
